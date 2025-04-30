@@ -54,7 +54,7 @@ GET /api/v2/post
 #### Click e URL
 
 ```http
- GET post/clique/{id}
+ GET /post/clique/{id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
