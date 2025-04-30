@@ -1,0 +1,52 @@
+[{
+  "_id": 1,
+  "title": "Aprovado no estagio!",
+  "summary": "Consegui uma vaga muito boa!",
+  "url": "https://itexto.com.br",
+  "indexDate": {
+    "$date": "2025-04-29T00:00:00.000Z"
+  },
+  "pubDate": {
+    "$date": "2025-04-29T00:00:00.000Z"
+  },
+  "_class": "com.itexto.itextoteste.entity.Post"
+},
+  {
+    "_id": 2,
+    "title": "Aprovado como junior!",
+    "summary": "Consegui uma vaga muito boa!",
+    "url": "https://itexto.com.br",
+    "indexDate": {
+      "$date": "2025-10-29T00:00:00.000Z"
+    },
+    "pubDate": {
+      "$date": "2023-01-20T00:00:00.000Z"
+    },
+    "_class": "com.itexto.itextoteste.entity.Post"
+  },
+  {
+    "_id": 3,
+    "title": "Aprovado como pleno!",
+    "summary": "Consegui uma vaga muito boa!",
+    "url": "https://itexto.com.br",
+    "indexDate": {
+      "$date": "2027-04-29T00:00:00.000Z"
+    },
+    "pubDate": {
+      "$date": "2025-05-29T00:00:00.000Z"
+    },
+    "_class": "com.itexto.itextoteste.entity.Post"
+  },
+  {
+    "_id": 4,
+    "title": "Fundei uma empresa e procuro funcionarios!",
+    "summary": "Consegui aprovar minha empresa ela chama itexto!",
+    "url": "https://itexto.com.br",
+    "indexDate": {
+      "$date": "2013-04-29T00:00:00.000Z"
+    },
+    "pubDate": {
+      "$date": "2024-11-30T00:00:00.000Z"
+    },
+    "_class": "com.itexto.itextoteste.entity.Post"
+  }]

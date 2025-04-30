@@ -1,0 +1,14 @@
+[{
+  "_id": 1,
+  "clicks": {
+    "$numberLong": "11"
+  },
+  "_class": "com.itexto.itextoteste.entity.Performance"
+},
+  {
+    "_id": 4,
+    "clicks": {
+      "$numberLong": "100"
+    },
+    "_class": "com.itexto.itextoteste.entity.Performance"
+  }]

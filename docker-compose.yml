@@ -1,15 +1,16 @@
-
+version: "3.8"
 services:
-  mysql:
-    image: mysql:lts
-    container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: devall
-      MYSQL_DATABASE: devall
-      MYSQL_USER: devall
-      MYSQL_PASSWORD: devall
+  mongo:
+    image: mongo:7
+    container_name: mongo
     ports:
-      - "3306:3306"
+      - "27017:27017"
     volumes:
-      - ./mysql_scripts:/docker-entrypoint-initdb.d
-   
+      - ./data:/data/import
+    command: >
+      bash -c "
+        mongod --bind_ip_all &
+        sleep 5 &&
+        mongoimport --db=itexto --collection=post --file=/data/import/posts.json --jsonArray &&
+        mongoimport --db=itexto --collection=performance --file=/data/import/performance.json --jsonArray
+      "

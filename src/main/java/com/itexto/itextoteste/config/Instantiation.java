@@ -1,5 +1,8 @@
+
 package com.itexto.itextoteste.config;
 
+// Essa configuracao foi criada para testar a criacao das colecoes no mongoDB, a imagem Docker e os dados estao
+// funcionando data em -> data/perfomance.json & data/posts.json
 
 import com.itexto.itextoteste.entity.Performance;
 import com.itexto.itextoteste.entity.Post;
@@ -24,6 +27,7 @@ import java.util.TimeZone;
     private Date indexDate;
     private Date pubDate;
  */
+/*
 @Configuration
 public class Instantiation implements CommandLineRunner {
 
@@ -52,3 +56,4 @@ public class Instantiation implements CommandLineRunner {
 
     }
 }
+*/
