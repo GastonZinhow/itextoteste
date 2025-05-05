@@ -20,7 +20,7 @@ public class PostService {
         return obj.orElseThrow(() -> new RuntimeException("Post não encontrado"));
     }
 
-    public List<Post> findByTitleSummary(String text) {
-        return postRepository.searchLike(text, Sort.by(Sort.Direction.DESC, "pubDate"));
+    public List<Post> findPost() {
+        return postRepository.findAll(Sort.by(Sort.Direction.DESC, "pubDate"));
     }
 }

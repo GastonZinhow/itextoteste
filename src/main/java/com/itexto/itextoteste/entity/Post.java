@@ -23,6 +23,16 @@ public class Post implements Serializable {
 
     public Post() {
     }
+
+    public Post(int id, String title, String summary, Site site, Date indexDate, Date pubDate) {
+        this.id = id;
+        this.title = title;
+        this.summary = summary;
+        this.site = site;
+        this.indexDate = indexDate;
+        this.pubDate = pubDate;
+    }
+
     public Post(int id, String title, String summary, String url, Site site, Date indexDate, Date pubDate) {
         this.id = id;
         this.title = title;
