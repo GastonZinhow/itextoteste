@@ -17,17 +17,18 @@ public class Post implements Serializable {
     private String title;
     private String summary;
     private String url;
-    //private Site site;
+    private Site site;
     private Date indexDate;
     private Date pubDate;
 
     public Post() {
     }
-    public Post(int id, String title, String summary, String url, Date indexDate, Date pubDate) {
+    public Post(int id, String title, String summary, String url, Site site, Date indexDate, Date pubDate) {
         this.id = id;
         this.title = title;
         this.summary = summary;
         this.url = url;
+        this.site = site;
         this.indexDate = indexDate;
         this.pubDate = pubDate;
     }
@@ -78,6 +79,14 @@ public class Post implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Site getSite() {
+        return site;
+    }
+
+    public void setSite(Site site) {
+        this.site = site;
     }
 
     @Override
