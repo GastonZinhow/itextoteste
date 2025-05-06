@@ -1,12 +1,18 @@
 services:
-
   mongo:
     image: mongo
     restart: always
     ports:
-        - 27017:27017
-    volumes:
-      - ./data:/data/import
+      - 27017:27017
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
+      ME_CONFIG_BASICAUTH: false
 
   mongo-seed:
     image: mongo
@@ -17,7 +23,7 @@ services:
     entrypoint: >
       bash -c "
         sleep 5 &&
-        mongoimport --db=itexto --collection=performance --file=/data/import/performance.json --jsonArray &&
-        mongoimport --db=itexto --collection=posts --file=/data/import/posts.json --jsonArray &&
-        mongoimport --db=itexto --collection=sites --file=/data/import/sites.json --jsonArray 
+        mongoimport --host=mongo --db=itexto --collection=performance --file=/data/import/performance.json --jsonArray &&
+        mongoimport --host=mongo --db=itexto --collection=posts --file=/data/import/posts.json --jsonArray &&
+        mongoimport --host=mongo --db=itexto --collection=sites --file=/data/import/sites.json --jsonArray
       "

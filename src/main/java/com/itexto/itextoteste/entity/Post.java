@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-@Document
+@Document(collection = "posts")
 public class Post implements Serializable {
     private static final long serialVersionUID = 1L;
 
